@@ -1,0 +1,146 @@
+html,
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 6px solid lightgray;
+  padding-left: 6px;
+  margin-left: 15px;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.fieldWrapper label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.fieldWrapper input {
+  margin-bottom: 6px;
+  border: 1px solid lightgray;
+  min-height: 40px;
+}
+
+.error {
+  font-size: 14px;
+  color: red;
+}
+
+.errorlist {
+  margin: 0;
+}
+
+.non_form_errors {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.question-title {
+  font-weight: 900;
+  margin: 20px auto 0 auto;
+}
+
+.question-body {
+  margin-bottom: 6px;
+}
+
+.question-author {
+  font-size: 14px;
+  color: green;
+}
+
+.responses-container {
+  border-top: 1px solid lightgray;
+  margin-top: 30px;
+}
+
+.responses-container-heading {
+  color: lightgray;
+}
+
+.no-responses-text {
+  color: lightgray;
+}
+
+.response-body {
+  margin: 0;
+}
+
+.response-author {
+  color: black;
+  font-style: italic;
+}
+
+.reply-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-transform: lowercase;
+  color: blue;
+  cursor: pointer;
+}
+
+.response-form {
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+  padding: 30px;
+}
+
+.reply-form-container {
+  display: none;
+}
+
+.reply-form-container.enabled {
+  display: block;
+}
+
+.reply-form textarea {
+  width: 100%;
+}
+
+.reply-form-cancel-button {
+  font-weight: 600;
+  color: cyan;
+  background-color: transparent;
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.reply-form-submit-button {
+  font-weight: 600;
+  color: black;
+  background-color: green;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}

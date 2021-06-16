@@ -1,0 +1,26 @@
+
+{% extends "layouts/page.html" %}
+{% block content %}
+    <!--Question list -->
+    <div class="container-lg p-3 my-2 bg-white text-dark">
+        {% for question in questions %}
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <h4 class="card-title">{{question.title}}</h4>
+                <p class="card-text">{{question.body}}</p>
+                <p>
+                    <p class="question-list-item-author">
+                        by : {{question.author.username}}
+                    </p>
+                
+                    <a href="/body/{{question.id}}" class="mr-2">Answers</a>
+                    
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>{{question.created_at}}</small>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %} 

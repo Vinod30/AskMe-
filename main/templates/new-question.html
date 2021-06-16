@@ -1,0 +1,40 @@
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+<div class="page new-question-page">
+<div class="container-lg p-3 my-3 bg-white text-dark">
+<br/>	
+<h1 class="title">Ask me anything!</h1>
+
+<br/>
+<form method="POST" action="" class="new-question-form">
+  {% csrf_token %}
+<div class="fieldWrapper">
+	<h4 class="title">Title:</h4>
+	<br/>
+  <label for="{{form.title.id_for_label}}"></label>
+  {{form.title}}
+  <span class="error">{{form.title.errors}}</span>
+</div>
+<br/>
+<div class="fieldWrapper">
+	<h4 class="title">Body:</h4>
+	<br/>
+  <label for="{{form.body.id_for_label}}"></label>
+  {{form.body}}
+  <span class="error">{{form.body.errors}}</span>
+
+</div>
+<br/>
+<br/>
+<button type="submit" value="Submit" class="btn btn-outline-success">Submit</button>
+
+</form>
+<br/>
+<div class="alert alert-info">
+  <strong>Information:</strong> Once you post your query, It can be answered by various users.
+</div>
+
+
+</div>
+{% endblock %}

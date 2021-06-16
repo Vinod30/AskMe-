@@ -1,0 +1,62 @@
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+<div class="container-lg p-3 my-3 bg-white text-dark">
+  <br/>
+<div class="page register-page">
+<h1 class="title">Register</h1>
+
+
+<form method="POST" action="" class="register-form">
+  {% csrf_token %}
+  <br/>
+  <p class="text-success">Welcome! Please fill the form below to access your account.</p>  
+<div class="fieldWrapper">
+  <h4 class="title">Email:</h4>
+  <br/>
+  <label for="{{form.email.id_for_label}}"></label>
+  {{form.email}}
+  <span class="error">{{form.email.errors}}</span>
+</div>
+<br/>
+<div class="fieldWrapper">
+
+  <h4 class="title">Username:</h4>
+  <br/>
+  <label for="{{form.username.id_for_label}}"></label>
+  {{form.username}}
+  <span class="error">{{form.username.errors}}</span>
+</div>
+<br/>
+<div class="fieldWrapper">
+  <h4 class="title">Password:</h4>
+  <br/>
+  <label for="{{form.password1.id_for_label}}"></label>
+  {{form.password1}}
+  <span class="error">{{form.password1.errors}}</span>
+</div>
+<br/>
+<div class="fieldWrapper">
+  <h4 class="title">Confirm Password:</h4>
+  <br/>
+  <label for="{{form.password2.id_for_label}}"></label>
+  {{form.password2}}
+  <span class="error">{{form.password2.errors}}</span>
+</div>
+{% if form.non_field_errors %}
+<div class="non_form_errors">
+  <span class="error">{{form.non_field_errors.as_ul}}</span>
+</div>
+
+{% endif %}
+<br/>
+
+<button type="submit" value="Register" class="btn btn-outline-success">Register</button>
+<br/>
+<br/>
+<a href="login.html">Already have an account? login here!</a>
+</form>
+
+</div>
+</div>
+{% endblock %}

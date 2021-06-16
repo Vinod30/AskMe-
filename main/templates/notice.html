@@ -1,0 +1,22 @@
+{% extends 'layouts/page.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-lg p-3 my-2 bg-white text-dark">
+	<div class="card mb-4 shadow">
+           <div class="card-body">
+           	 <h4 class="card-title">Mid-Semester Examinations</h4>
+                <p class="card-text">Schedule of Mid-Semester examinations which are going to be held in online mode and tests will be procted.</p>
+                <h6>Date : 06/05/2021</h6>
+                <br/>
+                <img src="{% static 'main/notice-pics/notice_1.jpeg'%}" width="600" height='300' alt="Error in loading image">
+                <br/>
+                <br/>
+                <h6>To download the above circular:</h6>
+                <a href="{% static 'main/notice-pics/notice_1.jpeg'%}" download="w3logo">Click here!!
+                </a>
+            </div>
+    </div>
+</div>
+                
+{% endblock %}
